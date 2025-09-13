@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: assigned-mern-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb+srv://Admintodo:1bmaCJ7GChFUaDlb@cluster0.nvxekxh.mongodb.net/assigned_db?retryWrites=true&w=majority&appName=Cluster0
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    restart: unless-stopped
+    command: npm run dev

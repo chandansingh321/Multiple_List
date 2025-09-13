@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://Admintodo:1bmaCJ7GChFUaDlb@cluster0.nvxekxh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://Admintodo:1bmaCJ7GChFUaDlb@cluster0.nvxekxh.mongodb.net/assigned_db?retryWrites=true&w=majority&appName=Cluster0';
 
 if (!MONGODB_URI) {
   // Intentionally not throwing to allow local, in-memory operation.
